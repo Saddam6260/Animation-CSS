@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 17px;
+}
+
+:root {
+  --background-color: #151618;
+  --thin-gray: #a1a2a3;
+  --hover-text: #e8e8e8;
+  --purple: #9e70eb;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--thin-gray);
+  transition-property: color;
+  padding: 1rem 0rem;
+}
+
+/* Header */
+
+header {
+  background-color: var(--background-color);
+  padding: 60px;
+  height: 60vh;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top_menu {
+  display: flex;
+  gap: 3rem;
+}
+
+.drop_down {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.drop_down::after {
+  content: url("./icons/icon-arrow-down.svg");
+  height: 23px;
+  opacity: 0.6;
+  transition-property: opacity;
+}
+
+.drop_down:hover::after {
+  opacity: 1;
+}
+
+.drop_down ul {
+  position: absolute;
+  top: 100%;
+  left: -2rem;
+  min-width: 15rem;
+  background-color: #212224;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transform: translateX(-1rem);
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility, transform;
+}
+
+.drop_down:hover ul {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.drop_down ul li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  transition-property: padding;
+}
+
+.drop_down ul li a:hover {
+  padding: 1rem 1.5rem;
+}
+
+.drop_down ul li a::after {
+  content: url("./icons/icon-arrow-right.svg");
+  opacity: 0;
+  height: 17px;
+  transition-property: opacity;
+}
+
+.drop_down ul li a:hover::after {
+  opacity: 1;
+}
+
+/* Button */
+button {
+  appearance: none;
+  border: 1px solid var(--purple);
+  background-color: transparent;
+  border-radius: 10rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition-property: border;
+}
+
+button a {
+  color: var(--purple);
+  transition-property: color;
+  padding: 0;
+}
+
+/* Transition */
+
+a:hover {
+  color: var(--hover-text);
+}
+
+button:hover {
+  border: 1px solid white;
+}
+
+button:hover a {
+  color: white;
+}
+
+a,
+button,
+button a,
+.drop_down::after,
+.drop_down ul,
+.drop_down ul li a,
+.drop_down ul li a::after {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
