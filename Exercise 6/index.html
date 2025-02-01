@@ -207,5 +207,19 @@
         </li>
       </ul>
     </div>
+
+    <script>
+      let accordionsItems = document.querySelectorAll(".accordion li");
+
+      accordionsItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          accordionsItems.forEach((item) => {
+            item.classList.remove("opened");
+          });
+
+          item.classList.add("opened");
+        });
+      });
+    </script>
   </body>
 </html>

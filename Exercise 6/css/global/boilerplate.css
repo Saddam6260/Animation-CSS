@@ -1,5 +1,5 @@
 :root {
-  --def-transition-duration: 0.2s;
+  --def-transition-duration: .3s;
 
   --common-f: "Plus Jakarta Sans";
   --color-cloudy: #5f7c9c;
@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(to bottom, var(--color-bg) 64%, white 36%);
 }
 
