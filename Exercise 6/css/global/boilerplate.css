@@ -1,0 +1,51 @@
+:root {
+  --def-transition-duration: 0.2s;
+
+  --common-f: "Plus Jakarta Sans";
+  --color-cloudy: #5f7c9c;
+  --color-cloudy-shade: #56708c;
+
+  --color-sunny: #3f7abc;
+  --color-sunny-shade: #396ea9;
+
+  --color-rainy: #26323e;
+  --color-rainy-shade: #222d38;
+
+  --color-thunderstorms: #101c29;
+  --color-thunderstorms-shade: #0e1925;
+
+  --color-bg: #151618;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--common-f), sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, var(--color-bg) 64%, white 36%);
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
